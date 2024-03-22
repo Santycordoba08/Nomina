@@ -1,0 +1,457 @@
+/* CSS de componente principal */
+
+                                      /* PRINCIPAL */
+
+.menu {
+    background-color: black;
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    z-index: 100;
+    color: violet;
+
+
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+
+    line-height: 0%;
+    height: 100%;
+    text-align: center;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    height: 10%;
+}
+
+.imgmenu {
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.imgmenu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search {
+    position: absolute;  
+    top: 30px;
+    right: 170px;
+    transform: translate(50%, -50%);
+    /* Centrar verticalmente el elemento */
+    background-color: rgb(239, 226, 226);
+}
+
+.search input[type="text"] {
+    width: 250px;
+}
+
+
+/* Centro */
+.App {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    left: 20px;
+}
+
+.App-header {
+    background-color: white;
+    color: black;
+    padding: 200px;
+    text-align: left;
+    left: 20px;
+    
+}
+
+.App-header h1 {
+    font-size: 2.7em;
+    margin-top: 5px;
+    position: absolute;
+    top: 150px;
+    left: 90px;
+    font-weight: 600;
+    color: black;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    align-items: flex-start;
+}
+
+.App-header p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: absolute;
+    top: 220px;
+    left: 90px;
+    font-weight: 200;
+    color: black;
+    text-align: justify;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+
+    
+}
+
+.App-header p1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-top: 2px;
+    position: absolute;
+    top: 450px;
+    left: 50px;
+
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    color: black;
+    text-align: left;    
+}
+
+
+.App-header ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.App-header li {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.App-header a {
+    color: white;
+    text-decoration: none;
+}
+
+.imagen {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -70px;
+    margin-right: -200px;
+    
+}
+
+.imagen img {
+    width: 40%;
+    height: auto;
+    border-radius: 00px;
+    
+}
+/* PIE DE PAGINA */
+footer{
+  background-color: rgb(81, 77, 77);
+  color: white;
+  font-size: 1rem;
+  top: 3px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.Piepagina{
+    flex: 1;
+    
+}
+
+.Piepagina h2{
+    flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  left: 2;
+}
+
+.Contactanos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 0;
+}
+
+.Contactanos a{
+    color: white;
+    margin-top: 0px;
+    /* top: -120px; */
+}
+
+
+/* **********************************************************************++ *
+                                   COMPONENTE DEL LOGIN*/
+
+
+html {
+  background-image: url('/public/blanco.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+.container {
+  margin: 80px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  text-align: center; */
+  gap: 20px;
+  width: 80%;
+  /* max-width: 700px; */
+  font-family:system-ui;
+}
+.bienvenida {
+  text-align: center;
+  font-family: "Lucida Console", Courier, monospace;
+  /* margin-top: 20px; */
+  display: inline-block;
+  font-family: Monospace;
+  border-right: 2.5px solid green;
+  animation: cursor .5s infinite, bienvenida 3.5s steps(16,end);
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 15px;
+
+}
+@keyframes cursor {
+  0% {border-color: transparent}
+  50%{border-color: green}
+}
+@keyframes bienvenida {
+  from{width: 0}
+  to{width: 100%}
+}
+.submit-btn {
+  background-color: #4cd2ea;
+  color: white;
+  font-weight: 500;
+  font-size: 14pt;
+  text-align: center;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 13px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+.submit-btn:hover {
+  opacity: 0.75;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.section-inputs {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  border-radius: 1%;
+  flex-direction: column;
+  font-family: "Lucida Console", Courier, monospace;
+}
+label input {
+  width: 100%;
+  background-color: #86e7f8;
+  border: solid 1px transparent;
+  padding: 9px 15px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14pt;
+  color: #7777f3;
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 15px;
+}
+label input:hover {
+  background-color: rgb(74, 227, 238);
+  border: solid 1px rgb(189, 223, 224);
+  box-shadow: 0 0 4px blue;
+}
+.simulador{
+  font-family:system-ui;
+  height: 35px;
+  font-size: 20px;
+  text-align: center;
+}
+.button-inic{
+  font-family: "Lucida Console", Courier, monospace;
+  text-align: center;
+  height: 20px;
+  border-color: #3ccaf5;
+  border-radius: 9px;
+}
+.recuperarContrasena{
+  font-style:initial;
+  text-align: center;
+}
+.centro{
+  margin: 50px
+}
+.table th{
+  border: 1px solid rgb(73, 183, 211);
+  padding: 8px; 
+  text-align: center; 
+  background-color: lightblue;
+}
+.text-pattern {
+  color: transparent;
+  background-color: #3ccaf5;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(41, 80, 187, 0.5) 25px, rgba(255, 255, 255, .5) 50px);    
+  background-clip: text;
+  animation: color 50s linear infinite;
+  background-size: 200%; 
+  font-size: 50px;
+  text-align: center;
+}
+
+@keyframes color {
+  from {
+      background-position: 0% 50%;
+  }
+
+  to {
+      background-position: 100% 50%;
+  }
+}
+
+  
+
+
+/* ********************************************************************************+ */
+                                    /* Liquidacion */
+
+
+.prestation-calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.prestation-calculator h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.prestation-calculator h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.prestation-calculator h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.prestation-calculator label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.prestation-calculator input[type="date"],
+.prestation-calculator input[type="number"],
+.prestation-calculator select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.prestation-calculator input[type="submit"] {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #4CA
+}
+
+/* ************************************************************************************************************************************* */
+                                                                           /* LIQUIDACION */
+
+.Liquidacion {
+  margin: 0 auto;
+  width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.Liquidacion input, select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+}
+
+.Liquidacion button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Liquidacion button:hover {
+  background-color: #3e8e41;
+}
+
+.Liquidacion label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
