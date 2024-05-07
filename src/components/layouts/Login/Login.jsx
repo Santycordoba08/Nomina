@@ -1,4 +1,15 @@
+import { connDatabase } from "../../database/firebaseConfig"
+import {collection, getDocs} from "firebase/firestore"
+import { Link } from "react-router-dom";
+
+
 const Login = ({ usuario, contrasena }) => {
+    async function getUsuario(){
+        let collectionUsarios = collection(connDatabase, 'usuarios');
+        let resultado = await getDocs(collectionUsarios);
+        console.log(resultado);
+    }
+    getUsuario()
     return (
         <div class="container">
             <h1 class= "text-pattern">Nómina y Gestión Humana</h1>
@@ -20,8 +31,9 @@ const Login = ({ usuario, contrasena }) => {
                             <input value={contrasena} type="text" />
                         </label>
                     </div> <br />
-
-                    <input class="button-inic" id="boton" typeo="button" value="Iniciar sesión" />
+                    <Link to={'/nomina'}>
+                    <button className="botonlogin" id="botonlogin" typeo="button">Iniciar sesion</button>
+                    </Link>
                 </form>
             </div>
             <a id="olvidasteContrasena" href="#" data-toggle="modal" data-target="#recuperarContrasenaModal"
