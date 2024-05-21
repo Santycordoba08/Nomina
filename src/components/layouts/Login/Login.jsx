@@ -1,6 +1,9 @@
 import { connDatabase } from "../../database/firebaseConfig"
 import {collection, getDocs} from "firebase/firestore"
 import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+
+
 
 
 const Login = ({ usuario, contrasena }) => {
@@ -10,6 +13,8 @@ const Login = ({ usuario, contrasena }) => {
         console.log(resultado);
     }
     getUsuario()
+
+        
     return (
         <div class="container">
             <h1 class= "text-pattern">Nómina y Gestión Humana</h1>
@@ -40,6 +45,8 @@ const Login = ({ usuario, contrasena }) => {
                 class="recuperarContrasena">¿Olvidaste tu contraseña?</a>
         </div>
     )
+
+    
 }
 
 export default Login

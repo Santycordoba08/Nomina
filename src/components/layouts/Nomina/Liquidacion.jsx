@@ -8,7 +8,10 @@ const Liquidacion = () => {
     const [riskClass, setRiskClass] = useState('');
 
     const calculate = () => {
-        // Aquí va la lógica de cálculo
+       let objeto = {
+        startDate, endDate, salary, hasTransportAllowance, riskClass
+       }
+       console.log(objeto)
     };
 
     return (
@@ -47,12 +50,12 @@ const Liquidacion = () => {
             </div>
             <br />
             <button onClick={calculate}>Calcular</button>
-<br />
+            <br />
             <div className=''>
                 6. Resultado
                 <input type="number" value={salary} onChange={(e) => setSalary(e.target.value)} />
             </div>
-            
+
         </div>
     );
 };
