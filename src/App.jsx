@@ -2,6 +2,11 @@ import Principal from "./components/layouts/Home/Principal"
 import Login from "./components/layouts/Login/Login"
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Liquidacion from "./components/layouts/Nomina/Liquidacion"
+{
+  /* The following line can be included in your src/index.js or App.js file */
+}
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const router = createBrowserRouter([
   {
     path:'/login',
@@ -16,6 +21,7 @@ const router = createBrowserRouter([
     path:'/nomina',
     element: <Liquidacion />
   },
+
 
 ])
 

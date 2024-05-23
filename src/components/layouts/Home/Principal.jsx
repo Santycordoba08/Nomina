@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-
+import Button from 'react-bootstrap/Button';
+import Example from "../modals/modal";
 const Principal = () => {
     return (
         <div className="App">
@@ -32,7 +33,7 @@ const Principal = () => {
                     En Cesde nos sentimos orgullosos de celebrar nuestros primeros 50 años de historia y de cosechar<br /> infinidad de logros, aprendizajes y experiencias que nos llenan de alegría y de gratitud. <br />Durante este tiempo, hemos materializado millones de sueños e impactado <br />la vida de miles de jóvenes emprendedores; empresas, colaboradores y familias.
                 </p>
 
-
+                
                 <p1>
                     Nuestro Propósito Superior es generar progreso social, productividad empresarial y movilidad social a través de un saber aplicado.
                 </p1>
@@ -40,7 +41,8 @@ const Principal = () => {
                 <div className="imagen">
                     <img src="public/Publicidad.jpg" alt="User" />
                 </div>
-                
+                <Example/>
+
 
             </header>
 

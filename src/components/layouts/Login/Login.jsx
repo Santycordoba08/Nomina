@@ -1,24 +1,60 @@
 import { connDatabase } from "../../database/firebaseConfig"
-import {collection, getDocs} from "firebase/firestore"
+import { collection, getDocs } from "firebase/firestore"
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
+const Login = () => {
+    const [usuarios, setUsuarios] = useState();
+    const [user, setUser] = useState("");
+    const [password, setPassword] = useState("");
+    let redireccion = useNavigate()
 
 
-const Login = ({ usuario, contrasena }) => {
-    async function getUsuario(){
+    async function getUsuario() {
         let collectionUsarios = collection(connDatabase, 'usuarios');
-        let resultado = await getDocs(collectionUsarios);
-        console.log(resultado);
-    }
-    getUsuario()
+        let data = await getDocs(collectionUsarios);
 
-        
+        console.log(data.docs.map((doc) => ({ ...doc.data() })));
+        setUsuarios(data.docs.map((doc) => ({ ...doc.data() })));
+
+    }
+    useEffect(() => {
+        getUsuario();
+    }, []);
+
+    const buscarUsuario = () => {
+        let estado = usuarios.some(
+            (usuario) => usuario.user === user && usuario.password == password
+        );
+        return estado;
+    };
+
+    const iniciarSesion = () => {
+        if (buscarUsuario()) {
+          Swal.fire({
+            title: "Bienvenido",
+            text: "Sera redidereccioando",
+            icon: "success"
+          });
+          redireccion('/nomina')
+    } else {
+        Swal.fire({
+          title: "Error",
+          text: "Credenciales incorrectas",
+          icon: "error"
+        });
+      }
+    };
+
+
+
     return (
         <div class="container">
-            <h1 class= "text-pattern">Nómina y Gestión Humana</h1>
-   
+            <h1 class="text-pattern">Nómina y Gestión Humana</h1>
+
             <p class="bienvenida">Te damos la bienvenida a nuestra solución, el sistema que integra todos los procesos de nómina y gestión humana en un solo lugar.</p>
 
             <div class="content">
@@ -28,25 +64,40 @@ const Login = ({ usuario, contrasena }) => {
                     <h2 class="simulador">Simulador de nómina</h2>
 
                     <div class="section-inputs">
-                        <label for="usuario">
-                            <input value={usuario} type="text" />
+                        <label for="user">
+                            <input
+                                onChange={(e) => setUser(e.target.value)}
+                                type="text"
+                                placeholder="username"
+                            />
                         </label>
 
-                        <label for="contrasena">
-                            <input value={contrasena} type="text" />
+                        <label for="password">
+                            <input
+                                onChange={(e) => setPassword(e.target.value)}
+                                type="password"
+                                placeholder="password"
+                            />
                         </label>
                     </div> <br />
-                    <Link to={'/nomina'}>
-                    <button className="botonlogin" id="botonlogin" typeo="button">Iniciar sesion</button>
-                    </Link>
+
+                    <button onClick={iniciarSesion} type="button">
+                        login
+                    </button>
+
+                    <button className="botonlogin" id="botonlogin" type="button">Iniciar sesion</button>
+
                 </form>
+
             </div>
+
             <a id="olvidasteContrasena" href="#" data-toggle="modal" data-target="#recuperarContrasenaModal"
                 class="recuperarContrasena">¿Olvidaste tu contraseña?</a>
         </div>
     )
 
-    
+
+
 }
 
 export default Login
