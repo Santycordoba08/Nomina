@@ -4,14 +4,15 @@ const Liquidacion = () => {
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     const [salary, setSalary] = useState(0);
+    const [salrayextra, setsalrayextra] = useState(0);
     const [hasTransportAllowance, setHasTransportAllowance] = useState(false);
     const [riskClass, setRiskClass] = useState('');
 
     const calculate = () => {
-       let objeto = {
-        startDate, endDate, salary, hasTransportAllowance, riskClass
-       }
-       console.log(objeto)
+        let objeto = {
+            startDate, endDate, salary, hasTransportAllowance, riskClass
+        }
+        console.log(objeto)
     };
 
     return (
@@ -42,18 +43,24 @@ const Liquidacion = () => {
             </div>
             <br />
             <div className=''>
-                5. Seleccione la clase de riesgos laborales correspondiente al sector de actividad y al cargo del trabajador.
-                <select value={riskClass} onChange={(e) => setRiskClass(e.target.value)}>
-                    <option value="">Select an option</option>
-                    {/* Agrega tus opciones de selección aquí */}
-                </select>
+                4. ¿Tiene horas extras?
+                <input type="number" value={salrayextra} onChange={(e) => setsalrayextra(e.target.value)} />
             </div>
+            {/* <div className=''> */}
+            {/* 5. Seleccione la clase de riesgos laborales correspondiente al sector de actividad y al cargo del trabajador. */}
+            {/* <select value={riskClass} onChange={(e) => setRiskClass(e.target.value)}> */}
+            {/* <option value="">Select an option</option> */}
+            {/* Agrega tus opciones de selección aquí */}
+            {/* </select> */}
+            {/* </div> */}
             <br />
             <button onClick={calculate}>Calcular</button>
             <br />
             <div className=''>
                 6. Resultado
-                <input type="number" value={salary} onChange={(e) => setSalary(e.target.value)} />
+                <div className='resultado'>
+                    {}
+                </div>
             </div>
 
         </div>
