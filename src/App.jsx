@@ -6,6 +6,7 @@ import Liquidacion from "./components/layouts/Nomina/Liquidacion"
   /* The following line can be included in your src/index.js or App.js file */
 }
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ListadoUsuario from "./components/layouts/Listado/ListadoUsuario";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path:'/nomina',
     element: <Liquidacion />
+  },
+  {
+    path:'/usuarios',
+    element: <ListadoUsuario />
   },
 
 
