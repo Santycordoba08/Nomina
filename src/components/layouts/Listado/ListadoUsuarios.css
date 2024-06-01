@@ -1,0 +1,47 @@
+/* Estilo para el contenedor de cada usuario */
+.user-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+}
+
+/* Estilo para la sección de detalles del usuario */
+.user-details {
+    margin-bottom: 10px;
+}
+
+/* Estilo para los párrafos dentro de la sección de detalles del usuario */
+.user-details p {
+    margin: 5px 0;
+}
+
+/* Estilo para el contenedor de los botones */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Estilo para los botones */
+.button-container button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.button-container .delete-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.button-container .edit-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.button-container button:hover {
+    opacity: 0.9;
+}

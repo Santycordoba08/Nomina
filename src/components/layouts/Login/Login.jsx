@@ -39,7 +39,7 @@ const Login = () => {
             text: "Sera redidereccioando",
             icon: "success"
           });
-          redireccion('/nomina')
+          redireccion('/usuarios')
     } else {
         Swal.fire({
           title: "Error",

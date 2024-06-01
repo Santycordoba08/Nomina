@@ -3,14 +3,15 @@ import { useNavigate } from "react-router-dom";
 import Principal from "../Home/Principal";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { connDatabase } from "../../database/firebaseConfig";
+import "./ListadoUsuarios.css";
 import Swal from "sweetalert2";
-
+import Navegador from "../NAV/Navegador";
 
 const ListadoUsuario = () => {
   const [usuarios, setUsuarios] = useState([]);
   let redireccion = useNavigate();
   async function getUsuarios() {
-    let resultado = collection(connDatabase, "usuarios");
+    let resultado = collection(connDatabase, "empleados");
     let data = await getDocs(resultado);
     /* Si es un arreglo, puedo iterarlo con los métodos de JS
         map */
@@ -24,7 +25,7 @@ const ListadoUsuario = () => {
 
   const eliminarUsuario = async (id) => {
     console.log("Eliminando el usuario " + id);
-    let deleteUser = doc(connDatabase, "usuarios", id);
+    let deleteUser = doc(connDatabase, "empleados", id);
     await deleteDoc(deleteUser);
     getUsuarios();
   };
@@ -52,25 +53,24 @@ const ListadoUsuario = () => {
 
   return (
     <section className="panel">
-      {/* <Principal /> */}
+      <Navegador />
       <main className="panel-contenido">
-        {usuarios.map((element) => (
-          <section>
-            <section>
-              <section>
+      {
+    usuarios.map((element) => (
+        <section className="user-container" key={element.id}>
+            <section className="user-details">
                 <p>Nombre: {element.name}</p>
-                <p>User: {element.user}</p>
-                <p>Password: {element.password}</p>
-                <p>Correo: {element.email}</p>
-              </section>
-              <div>
-                <button onClick={() => confirmar(element.id)}>Eliminar</button>
-
-                <button onClick={() => editarUsuario()}>Editar</button>
-              </div>
+                <p>Usuario: {element.user}</p>
+                <p>Correo: {element.password}</p>
             </section>
-          </section>
-        ))}
+            <div className="button-container">
+                <button className="delete-button" onClick={() => eliminarUsuario(element.id)}>Eliminar</button>
+                <button className="edit-button" onClick={() => editarUsuario()}>Editar</button>
+            </div>
+        </section>
+    ))
+}
+
       </main>
     </section>
   );

@@ -7,6 +7,7 @@ import Liquidacion from "./components/layouts/Nomina/Liquidacion"
 }
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ListadoUsuario from "./components/layouts/Listado/ListadoUsuario";
+import Registro from "./components/layouts/Login/Registro";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path:'/usuarios',
     element: <ListadoUsuario />
+  },
+  {
+    path:'/registro',
+    element: <Registro />
   },
 
 

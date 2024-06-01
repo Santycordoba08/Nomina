@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
-import Example from "../modals/modal";
+
 const Principal = () => {
     return (
         <div className="App">
@@ -11,7 +11,7 @@ const Principal = () => {
                     </div>
                     <ul>
                         <li>
-                            <Link to={'/login'}>Consulta en linea</Link>
+                            {/* <Link to={'/login'}>Consulta en linea</Link> */}
                         </li>
                         <li>
                             <a href="#seccion2">Sedes</a>
@@ -41,7 +41,7 @@ const Principal = () => {
                 <div className="imagen">
                     <img src="public/Publicidad.jpg" alt="User" />
                 </div>
-                <Example/>
+                
 
 
             </header>
