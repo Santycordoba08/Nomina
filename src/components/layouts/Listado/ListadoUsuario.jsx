@@ -6,6 +6,7 @@ import { connDatabase } from "../../database/firebaseConfig";
 import "./ListadoUsuarios.css";
 import Swal from "sweetalert2";
 import Navegador from "../NAV/Navegador";
+import DireccionHome from "../DireccionHome/DireccionHome";
 
 const ListadoUsuario = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -23,54 +24,88 @@ const ListadoUsuario = () => {
     getUsuarios();
   }, []);
 
-  const eliminarUsuario = async (id) => {
-    console.log("Eliminando el usuario " + id);
-    let deleteUser = doc(connDatabase, "empleados", id);
+  async function confirmar(id) {
+    let deleteUser = doc(connDatabase, 'empleados', id);
     await deleteDoc(deleteUser);
     getUsuarios();
-  };
-
-  function confirmar() {
+  }
+  function eliminarUsuario(id) {
     Swal.fire({
-      title: "Estás seguro?",
-      text: "No se puede reversar esta acción",
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Si, eliminar!",
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        eliminarUsuario(id);
+        confirmar(id);
         Swal.fire({
-          title: "Elimnado!",
-          text: "EL usuario fue eliminado.",
+          title: "Deleted!",
+          text: "Your file has been deleted.",
           icon: "success",
         });
       }
     });
   }
 
+  // const eliminarUsuario = async (id) => {
+  //   console.log("Eliminando el usuario " + id);
+  //   let deleteUser = doc(connDatabase, "empleados", id);
+  //   await deleteDoc(deleteUser);
+  //   getUsuarios();
+  // };
+
+  // function confirmar() {
+  //   Swal.fire({
+  //     title: "Estás seguro?",
+  //     text: "No se puede reversar esta acción",
+  //     icon: "warning",
+  //     showCancelButton: true,
+  //     confirmButtonColor: "#3085d6",
+  //     cancelButtonColor: "#d33",
+  //     confirmButtonText: "Si, eliminar!",
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       eliminarUsuario(id);
+  //       Swal.fire({
+  //         title: "Elimnado!",
+  //         text: "EL usuario fue eliminado.",
+  //         icon: "success",
+  //       });
+  //     }
+  //   });
+  // }
+
+ 
+
   return (
     <section className="panel">
       <Navegador />
+      <DireccionHome />
+      
       <main className="panel-contenido">
-      {
-    usuarios.map((element) => (
-        <section className="user-container" key={element.id}>
+        {usuarios.map((element) => (
+          <section className="user-container" key={element.id}>
             <section className="user-details">
-                <p>Nombre: {element.name}</p>
-                <p>Usuario: {element.user}</p>
-                <p>Correo: {element.password}</p>
+              <p>Nombre: {element.name}</p>
+              <p>Usuario: {element.user}</p>
+              <p>Correo: {element.password}</p>
             </section>
             <div className="button-container">
-                <button className="delete-button" onClick={() => eliminarUsuario(element.id)}>Eliminar</button>
-                <button className="edit-button" onClick={() => editarUsuario()}>Editar</button>
+              <button
+                className="delete-button"
+                onClick={() => eliminarUsuario(element.id)}
+              >
+                Eliminar
+              </button>
+              <button className="edit-button" onClick={() => editarUsuario()}>
+                Editar
+              </button>
             </div>
-        </section>
-    ))
-}
-
+          </section>
+        ))}
       </main>
     </section>
   );

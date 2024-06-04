@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import "./Login.css";
+import DireccionHome from "../DireccionHome/DireccionHome";
 
 
 const Login = () => {
@@ -53,6 +55,7 @@ const Login = () => {
 
     return (
         <div class="container">
+            <DireccionHome />
             <h1 class="text-pattern">Nómina y Gestión Humana</h1>
 
             <p class="bienvenida">Te damos la bienvenida a nuestra solución, el sistema que integra todos los procesos de nómina y gestión humana en un solo lugar.</p>

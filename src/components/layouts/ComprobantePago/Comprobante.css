@@ -1,0 +1,15 @@
+/* styles.css o tu archivo de estilos */
+.comprobante {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-top: 16px;
+    background-color: #f9f9f9;
+}
+
+.comprobante h2 {
+    margin-bottom: 16px;
+}
+
+.comprobante p {
+    margin: 4px 0;
+}

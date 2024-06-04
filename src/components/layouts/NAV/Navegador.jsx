@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./Navegador.css";
+import './Navegador.css'; // Importa el archivo CSS
 
 const Navegador = () => {
   const navigate = useNavigate(); // Hook de react-router-dom para la navegación
@@ -8,10 +8,10 @@ const Navegador = () => {
   const redirigir = () => {
     navigate("/registro"); // Redirigir a la ruta /registro
   };
-  
+
   return (
-    <nav>
-      <button onClick={redirigir}>Registrar</button>
+    <nav className="navegador">
+      <button className="boton-registrar" onClick={redirigir}>Registrar Empleado</button>
     </nav>
   );
 };

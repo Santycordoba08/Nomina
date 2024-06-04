@@ -1,0 +1,164 @@
+html {
+  background-image: url("/public/blanco.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.container {
+  margin: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  font-family: system-ui;
+}
+
+.bienvenida {
+  text-align: center;
+  font-family: "Lucida Console", Courier, monospace;
+  /* margin-top: 20px; */
+  display: inline-block;
+  font-family: Monospace;
+  border-right: 2.5px solid green;
+  animation: cursor 0.5s infinite, bienvenida 3.5s steps(16, end);
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 15px;
+}
+@keyframes cursor {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: green;
+  }
+}
+@keyframes bienvenida {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.submit-btn {
+  background-color: #4cd2ea;
+  color: white;
+  font-weight: 500;
+  font-size: 14pt;
+  text-align: center;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 13px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+.submit-btn:hover {
+  opacity: 0.75;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+/* .section-inputs {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    border-radius: 1%;
+    flex-direction: column;
+    font-family: "Lucida Console", Courier, monospace;
+  }
+  label input {
+    width: 100%;
+    background-color: #86e7f8;
+    border: solid 1px transparent;
+    padding: 9px 15px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14pt;
+    color: #7777f3;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 15px;
+  } */
+
+.section-inputs {
+  display: flex;
+  gap: 20px;
+  width: 100%; /* Esto establece el ancho del contenedor */
+  border-radius: 1%;
+  flex-direction: column;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+label input {
+  width: 100%; /* Este valor hace que los inputs ocupen todo el ancho del contenedor */
+  background-color: #86e7f8;
+  border: solid 1px transparent;
+  padding: 9px 15px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14pt;
+  color: #7777f3;
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 15px;
+}
+
+label input:hover {
+  background-color: rgb(74, 227, 238);
+  border: solid 1px rgb(189, 223, 224);
+  box-shadow: 0 0 4px blue;
+}
+.simulador {
+  font-family: system-ui;
+  height: 35px;
+  font-size: 20px;
+  text-align: center;
+}
+.botonlogin {
+  font-family: "Lucida Console", Courier, monospace;
+  text-align: center;
+  height: 20px;
+  border-color: #3ccaf5;
+  border-radius: 9px;
+}
+.recuperarContrasena {
+  font-style: initial;
+  text-align: center;
+}
+.centro {
+  margin: 50px;
+}
+.table th {
+  border: 1px solid rgb(73, 183, 211);
+  padding: 8px;
+  text-align: center;
+  background-color: lightblue;
+}
+.text-pattern {
+  color: transparent;
+  background-color: #3ccaf5;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 25px,
+    rgba(41, 80, 187, 0.5) 25px,
+    rgba(255, 255, 255, 0.5) 50px
+  );
+  background-clip: text;
+  animation: color 50s linear infinite;
+  background-size: 200%;
+  font-size: 50px;
+  text-align: center;
+}
+
+@keyframes color {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 100% 50%;
+  }
+}
