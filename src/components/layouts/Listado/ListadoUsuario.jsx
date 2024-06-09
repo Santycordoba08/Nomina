@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Principal from "../Home/Principal";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { connDatabase } from "../../database/firebaseConfig";
+import { Link } from "react-router-dom";
 import "./ListadoUsuarios.css";
 import Swal from "sweetalert2";
 import Navegador from "../NAV/Navegador";
@@ -25,10 +26,10 @@ const ListadoUsuario = () => {
   }, []);
 
   async function confirmar(id) {
-    let deleteUser = doc(connDatabase, 'empleados', id);
+    let deleteUser = doc(connDatabase, "empleados", id);
     await deleteDoc(deleteUser);
     getUsuarios();
-  }
+  }
   function eliminarUsuario(id) {
     Swal.fire({
       title: "Are you sure?",
@@ -50,48 +51,27 @@ const ListadoUsuario = () => {
     });
   }
 
-  // const eliminarUsuario = async (id) => {
-  //   console.log("Eliminando el usuario " + id);
-  //   let deleteUser = doc(connDatabase, "empleados", id);
-  //   await deleteDoc(deleteUser);
-  //   getUsuarios();
-  // };
-
-  // function confirmar() {
-  //   Swal.fire({
-  //     title: "Estás seguro?",
-  //     text: "No se puede reversar esta acción",
-  //     icon: "warning",
-  //     showCancelButton: true,
-  //     confirmButtonColor: "#3085d6",
-  //     cancelButtonColor: "#d33",
-  //     confirmButtonText: "Si, eliminar!",
-  //   }).then((result) => {
-  //     if (result.isConfirmed) {
-  //       eliminarUsuario(id);
-  //       Swal.fire({
-  //         title: "Elimnado!",
-  //         text: "EL usuario fue eliminado.",
-  //         icon: "success",
-  //       });
-  //     }
-  //   });
-  // }
-
- 
-
   return (
     <section className="panel">
       <Navegador />
       <DireccionHome />
-      
+
       <main className="panel-contenido">
         {usuarios.map((element) => (
           <section className="user-container" key={element.id}>
             <section className="user-details">
-              <p>Nombre: {element.name}</p>
-              <p>Usuario: {element.user}</p>
-              <p>Correo: {element.password}</p>
+              <b>
+                <p>Nombre: {element.name}</p>
+              </b>
+              <p>Apellidos: {element.apellidos}</p>
+              <b>
+                <p>ID: {element.documento}</p>
+              </b>
+              <p>Contrato: {element.contrato}</p>
+              <b>
+                <p>Función/Cargo: {element.funcion}</p>
+              </b>
+              <img className="img" src={element.imgServer} alt={element.name}/>
             </section>
             <div className="button-container">
               <button
@@ -100,9 +80,16 @@ const ListadoUsuario = () => {
               >
                 Eliminar
               </button>
-              <button className="edit-button" onClick={() => editarUsuario()}>
+              {/* <button onClick={editar + element.id}  className="edit-button">
                 Editar
-              </button>
+              </button> */}
+              <div>
+                <Link to={"/editar/" + element.id}>Editar</Link>
+              </div>
+              {/* 
+              <button onClick={iniciarSesion} className="botonlogin" id="botonlogin" type="button">
+                        login
+                    </button> */}
             </div>
           </section>
         ))}

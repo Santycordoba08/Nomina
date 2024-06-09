@@ -8,6 +8,8 @@ import Liquidacion from "./components/layouts/Nomina/Liquidacion"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ListadoUsuario from "./components/layouts/Listado/ListadoUsuario";
 import Registro from "./components/layouts/Login/Registro";
+import Comprobante from "./components/layouts/ComprobantePago/Comprobante";
+import EditarUsuario from "./components/layouts/Listado/EditarUsuario";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,15 @@ const router = createBrowserRouter([
   {
     path:'/registro',
     element: <Registro />
+  },
+  {
+    path:'/comprobante',
+    element: <Comprobante />
+  },
+
+  {
+    path: "/editar/:id",
+    element: <EditarUsuario />,
   },
 
 

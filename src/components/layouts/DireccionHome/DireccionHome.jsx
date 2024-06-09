@@ -6,12 +6,14 @@ const DireccionHome = () => {
     const navigate = useNavigate(); 
 
     const redirigir = () => {
-      navigate("/principal"); 
+      navigate("/"); 
     };
   
     return (
       <nav className="regresar">
-        <button className="boton-registrar" onClick={redirigir}>HOME</button>
+        <button className="boton-registrar" onClick={redirigir}>
+          HOME
+        </button>
       </nav>
     );
 }

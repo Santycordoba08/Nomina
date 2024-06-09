@@ -1,5 +1,5 @@
 /* styles.css o tu archivo de estilos */
-.comprobante {
+/* .comprobante {
     border: 1px solid #ccc;
     padding: 16px;
     margin-top: 16px;
@@ -12,4 +12,47 @@
 
 .comprobante p {
     margin: 4px 0;
+} */
+
+
+/* Comprobante.css */
+.comprobante {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.comprobante h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.comprobante-detalle {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.comprobante-detalle p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.comprobante-detalle span {
+    font-weight: bold;
+    color: #333;
+}
+
+.comprobante p {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
 }

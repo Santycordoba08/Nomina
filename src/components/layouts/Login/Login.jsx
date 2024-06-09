@@ -84,11 +84,10 @@ const Login = () => {
                         </label>
                     </div> <br />
 
-                    <button onClick={iniciarSesion} type="button">
+                    <button onClick={iniciarSesion} className="botonlogin" id="botonlogin" type="button">
                         login
                     </button>
 
-                    <button className="botonlogin" id="botonlogin" type="button">Iniciar sesion</button>
 
                 </form>
 

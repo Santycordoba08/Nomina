@@ -15,10 +15,10 @@ html {
 .bienvenida {
   text-align: center;
   font-family: "Lucida Console", Courier, monospace;
-  /* margin-top: 20px; */
+ 
   display: inline-block;
   font-family: Monospace;
-  border-right: 2.5px solid green;
+  border-right: 2.5px solid #e68cc0;
   animation: cursor 0.5s infinite, bienvenida 3.5s steps(16, end);
   white-space: nowrap;
   overflow: hidden;
@@ -29,7 +29,7 @@ html {
     border-color: transparent;
   }
   50% {
-    border-color: green;
+    border-color: #e68cc0;
   }
 }
 @keyframes bienvenida {
@@ -94,21 +94,21 @@ html {
 
 label input {
   width: 100%; /* Este valor hace que los inputs ocupen todo el ancho del contenedor */
-  background-color: #86e7f8;
+  background-color: #f1e6ee;
   border: solid 1px transparent;
   padding: 9px 15px;
   border-radius: 8px;
   outline: none;
   font-size: 14pt;
-  color: #7777f3;
+  color: #f1e6ee;
   font-family: "Lucida Console", Courier, monospace;
   font-size: 15px;
 }
 
 label input:hover {
-  background-color: rgb(74, 227, 238);
-  border: solid 1px rgb(189, 223, 224);
-  box-shadow: 0 0 4px blue;
+  background-color: #f1e6ee(74, 227, 238);
+  border: solid 1px #f1e6ee(189, 223, 224);
+  box-shadow: 0 0 4px #f1e6ee;
 }
 .simulador {
   font-family: system-ui;
@@ -131,20 +131,20 @@ label input:hover {
   margin: 50px;
 }
 .table th {
-  border: 1px solid rgb(73, 183, 211);
+  border: 1px solid #f1e6ee(73, 183, 211);
   padding: 8px;
   text-align: center;
-  background-color: lightblue;
+  background-color: #f1e6ee;
 }
 .text-pattern {
   color: transparent;
-  background-color: #3ccaf5;
+  background-color:  #e82e7b;
   background-image: repeating-linear-gradient(
     45deg,
     transparent,
     transparent 25px,
-    rgba(41, 80, 187, 0.5) 25px,
-    rgba(255, 255, 255, 0.5) 50px
+    #f1e6ee(41, 80, 187, 0.5) 25px,
+    #f1e6ee(255, 255, 255, 0.5) 50px
   );
   background-clip: text;
   animation: color 50s linear infinite;
