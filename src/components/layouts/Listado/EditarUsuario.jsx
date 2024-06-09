@@ -445,7 +445,7 @@
 // export default EditarUsuarios;
 
 import React, { useState, useEffect } from "react";
- import "./EditarUsuario.css";
+import "./EditarUsuario.css";
 import { connDatabase, connStorage } from "../../database/firebaseConfig";
 
 import { collection, doc, getDoc, updateDoc } from "firebase/firestore";
@@ -508,6 +508,7 @@ const EditarUsuario = () => {
   return (
     <div className="login-page">
       <div className="form">
+        <h1 className="Titulo">Aquí podrás editar el empleado</h1><br />
         <form className="login-form">
           <input
             onChange={(e) => setName(e.target.value)}
@@ -521,24 +522,24 @@ const EditarUsuario = () => {
             placeholder="Apellidos"
             value={apellidos}
           />
-         
+
           <input
             onChange={(e) => setDocumento(e.target.value)}
             type="text"
             placeholder="Documento"
-             value={documento}
+            value={documento}
           />
           <input
             onChange={(e) => setContrato(e.target.value)}
             type="text"
             placeholder="Contrato"
-             value={contrato}
+            value={contrato}
           />
           <input
             onChange={(e) => setFuncion(e.target.value)}
             type="text"
             placeholder="Funcion/cargo"
-             value={funcion}
+            value={funcion}
           />
           <input onChange={(e) => setImg(e.target.files[0])} type="file" />
 

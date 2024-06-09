@@ -85,7 +85,7 @@ const Login = () => {
                     </div> <br />
 
                     <button onClick={iniciarSesion} className="botonlogin" id="botonlogin" type="button">
-                        login
+                        Iniciar Sesion
                     </button>
 
 

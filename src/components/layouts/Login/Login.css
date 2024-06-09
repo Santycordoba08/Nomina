@@ -41,7 +41,7 @@ html {
   }
 }
 .submit-btn {
-  background-color: #4cd2ea;
+  background-color:  #e82e7b;
   color: white;
   font-weight: 500;
   font-size: 14pt;
@@ -86,7 +86,7 @@ html {
 .section-inputs {
   display: flex;
   gap: 20px;
-  width: 100%; /* Esto establece el ancho del contenedor */
+  width: 120%; /* Esto establece el ancho del contenedor */
   border-radius: 1%;
   flex-direction: column;
   font-family: "Lucida Console", Courier, monospace;
@@ -94,21 +94,21 @@ html {
 
 label input {
   width: 100%; /* Este valor hace que los inputs ocupen todo el ancho del contenedor */
-  background-color: #f1e6ee;
+  background-color:  #fce1f3 ;
   border: solid 1px transparent;
   padding: 9px 15px;
   border-radius: 8px;
   outline: none;
   font-size: 14pt;
-  color: #f1e6ee;
+  color: black;
   font-family: "Lucida Console", Courier, monospace;
   font-size: 15px;
 }
 
 label input:hover {
-  background-color: #f1e6ee(74, 227, 238);
-  border: solid 1px #f1e6ee(189, 223, 224);
-  box-shadow: 0 0 4px #f1e6ee;
+  background-color: #fce1f3 (74, 227, 238);
+  border: solid 1px #fce1f3 (189, 223, 224);
+  box-shadow: 0 0 4px #fce1f3 ;
 }
 .simulador {
   font-family: system-ui;
@@ -119,13 +119,16 @@ label input:hover {
 .botonlogin {
   font-family: "Lucida Console", Courier, monospace;
   text-align: center;
-  height: 20px;
-  border-color: #3ccaf5;
-  border-radius: 9px;
+  height: 25px;
+  width:200px;
+  border-color: #e82e7b ;
+  border-radius: 30px;
 }
 .recuperarContrasena {
   font-style: initial;
+  font-size:20px;
   text-align: center;
+  color: #e82e7b;
 }
 .centro {
   margin: 50px;

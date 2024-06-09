@@ -59,7 +59,7 @@
 
 
 /* Comprobante.css */
-.comprobante {
+/* .comprobante {
     padding: 20px;
 }
 
@@ -75,4 +75,92 @@
 
 .comprobante-detalle span {
     font-weight: bold;
+} */
+
+
+
+/* 
+.comprobante-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid  #e82e7b ;
+    border-radius: 5px;
+    background-color:  #fcf4fc ;
+    
+}
+
+.clase-fondo{
+    background-color:  #fce4f4 
+}
+
+.comprobante-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.comprobante-detalle {
+    margin-bottom: 30px;
+}
+
+.liquidation-list-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.liquidation-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.no-data-message {
+    font-style: italic;
+    text-align: center;
+} */
+
+
+
+/* *****************************************
+ */
+
+
+.comprobante-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.comprobante-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.comprobante-detalle {
+    margin-bottom: 30px;
+}
+
+.liquidation-list-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.liquidation-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.no-data-message {
+    font-style: italic;
 }
