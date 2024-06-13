@@ -11,7 +11,7 @@ CSS de componente principal
   margin: auto;
 }
 
- .form {
+.form {
   position: relative;
   z-index: 1;
   background: #ffffff;
@@ -20,7 +20,7 @@ CSS de componente principal
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-} 
+}
 
 .form input {
   font-family: "Roboto", sans-serif;
@@ -238,9 +238,8 @@ select {
   width: 200px !important;
   left: 100px;
   top: 0;
-} */ */
-
-.boton-registrar {
+} */
+*/ .boton-registrar {
   background-color: red; /* Color de fondo */
   color: white; /* Color del texto */
   border: none; /* Opcional: elimina el borde del botón */
@@ -248,7 +247,6 @@ select {
   cursor: pointer; /* Opcional: cambia el cursor al pasar sobre el botón */
   font-size: 16px; /* Opcional: ajusta el tamaño del texto */
 }
-
 
 /* styles.css */
 
@@ -319,7 +317,7 @@ select {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
   background-color: #fbe8fc;
-  background-image: url('path/to/your/background-image.jpg');
+  background-image: url("path/to/your/background-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -371,11 +369,16 @@ select {
 }
 
 .boton-registrar {
-  background-color: red; /* Color de fondo */
-  color: white; /* Color del texto */
-  border: none; /* Opcional: elimina el borde del botón */
-  padding: 10px 20px; /* Opcional: ajusta el padding del botón */
-  cursor: pointer; /* Opcional: cambia el cursor al pasar sobre el botón */
-  font-size: 16px; /* Opcional: ajusta el tamaño del texto */
+  background-color: #d7286a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
+.fondo-calculadora {
+  background: #fce1f3;
+  width: 100vw;
+  height: 100vh;
+}

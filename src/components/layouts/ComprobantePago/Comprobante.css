@@ -49,3 +49,12 @@ p {
     text-align: center;
     color: #666;
 }
+
+.delete-button{
+    background-color: #d7286a; 
+    color: white; 
+    border: none; 
+    padding: 7px 10px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}

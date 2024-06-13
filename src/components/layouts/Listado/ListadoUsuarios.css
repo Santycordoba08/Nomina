@@ -68,3 +68,22 @@
 .button-container .liquidacion-button:hover {
     background-color: #d7286a; /* Cambiado para un mejor efecto hover */
 }
+
+
+
+.comprobante-button {
+    position: fixed;
+    width: 200px !important;
+    left: 230px;
+    top: 0;
+  }
+
+  .comprobante-button {
+    background-color: #d7286a; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Opcional: elimina el borde del botón */
+    padding: 10px 20px; /* Opcional: ajusta el padding del botón */
+    cursor: pointer; /* Opcional: cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Opcional: ajusta el tamaño del texto */
+  }
+
