@@ -58,7 +58,7 @@ const Login = () => {
             <DireccionHome />
             <h1 class="text-pattern">Nómina y Gestión Humana</h1>
 
-            <p class="bienvenida">Te damos la bienvenida a nuestra solución, el sistema que integra todos los procesos de nómina y gestión humana en un solo lugar.</p>
+            <p class="bienvenida">Te damos la bienvenida a nuestra solución, el sistema que integra todos los procesos de nómina <br /> y gestión humana en un solo lugar.</p>
 
             <div class="content">
                 <img src="public/imglogin.png" alt="User" width="240" height="230" /><br /> <br />
